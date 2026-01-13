@@ -60,15 +60,16 @@
         }
 
         .content-container {
-            background: rgb(235, 228, 218);
+            background: #000000;
             width: 600px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
             position: relative;
             border-radius: 8px;
             display: flex;
             flex-direction: column;
             z-index: 2;
             flex-shrink: 0;
+            border: 1px solid rgba(235, 228, 218, 0.15);
         }
 
         .side-column {
@@ -90,11 +91,12 @@
         }
 
         .side-panel {
-            background: rgb(235, 228, 218);
+            background: #000000;
             height: 320px;
             width: 100%;
             border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(235, 228, 218, 0.1);
         }
 
         .banner {
@@ -120,11 +122,11 @@
             height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            background: #b8a898;
+            background: #000000;
             position: absolute;
             top: -80px;
             left: 40px;
-            border: 6px solid rgb(235, 228, 218);
+            border: 0;
         }
 
         .profile-emoji {
@@ -132,7 +134,7 @@
             left: 215px; 
             top: 25px;
             font-size: 1.4rem;
-            color: #1a1612;
+            color: rgb(235, 228, 218);
             font-weight: normal;
         }
 
@@ -141,11 +143,11 @@
             text-align: right;
         }
 
-        .profile-name { font-size: 1.8rem; font-weight: bold; color: #1a1612; letter-spacing: 1px; }
+        .profile-name { font-size: 1.8rem; font-weight: bold; color: rgb(235, 228, 218); letter-spacing: 1px; }
         
         .profile-details { 
             font-size: 1.2rem;
-            color: #1a1612; 
+            color: rgb(235, 228, 218); 
         }
         
         .beige { color: #a89478; }
@@ -162,7 +164,7 @@
             height: 0;
             border-left: 8px solid transparent;
             border-right: 8px solid transparent;
-            border-top: 8px solid #4a3f35;
+            border-top: 8px solid rgb(235, 228, 218);
             transition: transform 0.4s ease;
             cursor: pointer;
         }
@@ -185,8 +187,8 @@
         }
 
         .content-section { margin-bottom: 20px; }
-        .content-section h3 { color: #1a1612; margin-bottom: 5px; }
-        .content-section p { color: #4a3f35; line-height: 1.6; }
+        .content-section h3 { color: rgb(235, 228, 218); margin-bottom: 5px; }
+        .content-section p { color: rgba(235, 228, 218, 0.8); line-height: 1.6; }
 
         .social-links {
             display: flex;
@@ -208,7 +210,7 @@
 
         .social-icon {
             font-size: 24px;
-            color: #4a3f35;
+            color: rgb(235, 228, 218);
             transition: all 0.3s ease;
             text-decoration: none;
             display: flex;
@@ -235,32 +237,29 @@
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            background: #ebe4da;
-            border: none;
+            background: #000000;
+            border: 1px solid rgba(235, 228, 218, 0.3);
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 20px;
-            color: #4a3f35;
+            color: rgb(235, 228, 218);
             z-index: 1000;
             transition: all 0.3s ease;
         }
 
-        .power-btn:hover { background: #fff; transform: translateX(-50%) scale(1.1); }
+        .power-btn:hover { background: #111; transform: translateX(-50%) scale(1.1); }
     </style>
 </head>
 <body>
-
     <div id="dim-overlay"></div>
-
     <div class="main-wrapper" id="mainWrapper">
         <div class="side-column left-col" id="leftCol">
             <div class="side-panel tilt-target"></div>
             <div class="side-panel tilt-target"></div>
         </div>
-
         <div class="content-container tilt-target" id="container">
             <div class="banner"></div>
             <div class="profile-section">
@@ -271,7 +270,6 @@
                     <div class="profile-details"><span class="beige">18</span> he/him <span class="beige">PST</span> infp</div>
                 </div>
             </div>
-            
             <div class="expanded-content" id="expandedContent">
                 <div class="content-section">
                     <h3>⋆ fyi</h3>
@@ -282,30 +280,25 @@
                     <p>i strongly advise not seeking me out for heavy topics as i do not have the ability to console others</p>
                 </div>
             </div>
-
             <div class="social-links" id="socialLinks">
                 <a href="https://steamcommunity.com/id/cd7n/" target="_blank" class="social-icon"><i class="fa-brands fa-steam"></i></a>
                 <a href="https://x.com/ccd7n_" target="_blank" class="social-icon">
                     <svg viewBox="0 0 24 24"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.237-1.594 1.25-3.604 1.995-5.792 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"/></svg>
                 </a>
-                <a href="https://open.spotify.com/user/2zh4hb9jnp54qyph84ugn4n1v" target="_blank" class="social-icon">
+                <a href="http://spotify.com" target="_blank" class="social-icon">
                     <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.508 17.302c-.216.354-.675.466-1.03.25-2.843-1.737-6.422-2.13-10.638-1.168-.404.093-.812-.162-.905-.565-.093-.404.162-.812.565-.905 4.61-1.054 8.57-.6 11.756 1.346.355.216.466.675.252 1.042zm1.47-3.255c-.272.44-.847.58-1.287.308-3.255-1.998-8.216-2.58-12.064-1.41-.497.15-1.022-.13-1.172-.627-.15-.497.13-1.022.627-1.172 4.41-1.336 9.878-.683 13.6 1.597.44.272.58.847.308 1.287l-.012.017zm.126-3.39c-3.905-2.32-10.334-2.533-14.077-1.396-.6.182-1.232-.158-1.414-.757-.182-.6.158-1.232.757-1.414 4.306-1.306 11.403-1.054 15.903 1.62.54.32.716 1.013.396 1.553-.32.54-1.013.716-1.553.396l-.012-.002z"></path></svg>
                 </a>
             </div>
-
             <div class="expand-button">
                 <div class="arrow" id="arrow"></div>
             </div>
         </div>
-
         <div class="side-column right-col" id="rightCol">
             <div class="side-panel tilt-target"></div>
             <div class="side-panel tilt-target"></div>
         </div>
     </div>
-
     <button class="power-btn" id="powerBtn">⏻</button>
-
     <script>
         const emoticons = [">⩊<", "ᨐᵉᵒʷ", "(•˕ •マ.ᐟ"];
         const emojiElement = document.getElementById('randomEmoji');
