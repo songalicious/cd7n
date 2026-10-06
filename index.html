@@ -1,9 +1,10 @@
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cd7n</title>
+    <title>@</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
     <style>
@@ -89,16 +90,27 @@
             border-radius: 12px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
             border: 1px solid rgba(235, 228, 218, 0.1);
-            background-size: cover;     
-            background-position: center; 
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
-            background-color: #000;     
+            background-color: #000;
         }
 
-        #box1 { background-image: url('box1.gif'); }
-        #box2 { background-image: url('box2.png'); }
-        #box3 { background-image: url('box3.png'); }
-        #box4 { background-image: url('box4.png'); }
+        #box1 {
+            background-image: url('box1.gif');
+        }
+
+        #box2 {
+            background-image: url('box2.png');
+        }
+
+        #box3 {
+            background-image: url('box3.png');
+        }
+
+        #box4 {
+            background-image: url('box4.png');
+        }
 
         .banner {
             width: 100%;
@@ -132,7 +144,7 @@
 
         .profile-emoji {
             position: absolute;
-            left: 215px; 
+            left: 215px;
             top: 25px;
             font-size: 1.4rem;
             color: rgb(235, 228, 218);
@@ -144,47 +156,22 @@
             text-align: right;
         }
 
-        .profile-name { font-size: 1.8rem; font-weight: bold; color: rgb(235, 228, 218); letter-spacing: 1px; }
-        .profile-details { font-size: 1.2rem; color: rgb(235, 228, 218); }
-        .beige { color: #a89478; font-weight: bold;}
-
-        .expand-button {
-            display: flex;
-            justify-content: center;
-            padding: 15px;
-            order: 4; 
+        .profile-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: rgb(235, 228, 218);
+            letter-spacing: 1px;
         }
 
-        .arrow {
-            width: 0;
-            height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-top: 8px solid rgb(235, 228, 218);
-            transition: transform 0.4s ease;
-            cursor: pointer;
+        .profile-details {
+            font-size: 1.2rem;
+            color: rgb(235, 228, 218);
         }
 
-        .arrow.rotated { transform: rotate(180deg); }
-
-        .expanded-content {
-            max-height: 0;
-            overflow: hidden;
-            padding: 0 40px;
-            opacity: 0;
-            transition: all 0.5s ease-in-out;
-            order: 2; 
+        .beige {
+            color: #a89478;
+            font-weight: bold;
         }
-
-        .expanded-content.show {
-            max-height: 800px;
-            padding: 20px 40px 10px 40px;
-            opacity: 1;
-        }
-
-        .content-section { margin-bottom: 20px; }
-        .content-section h3 { color: rgb(235, 228, 218); margin-bottom: 5px; }
-        .content-section p { color: rgba(235, 228, 218, 0.8); line-height: 1.6; }
 
         .social-links {
             display: flex;
@@ -192,16 +179,7 @@
             align-items: center;
             gap: 30px;
             padding: 10px 40px 20px 40px;
-            order: 3;
-            opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.5s ease-in-out;
-        }
-
-        .social-links.show {
             opacity: 1;
-            max-height: 100px;
         }
 
         .social-icon {
@@ -223,7 +201,7 @@
         .gunslol-icon {
             width: 22px;
             height: 22px;
-			margin-left: -4px;
+            margin-left: -4px;
             background-color: currentColor;
             -webkit-mask: url('https://assets.guns.lol/guns_logo_no_background_cropped.png') no-repeat center / contain;
             mask: url('https://assets.guns.lol/guns_logo_no_background_cropped.png') no-repeat center / contain;
@@ -255,11 +233,15 @@
             transition: all 0.3s ease;
         }
 
-        .power-btn:hover { background: #111; transform: translateX(-50%) scale(1.1); }
+        .power-btn:hover {
+            background: #111;
+            transform: translateX(-50%) scale(1.1);
+        }
     </style>
 </head>
 <body>
     <div id="dim-overlay"></div>
+
     <div class="main-wrapper" id="mainWrapper">
         <div class="side-column left-col" id="leftCol">
             <div id="box1" class="side-panel tilt-target"></div>
@@ -268,9 +250,11 @@
 
         <div class="content-container tilt-target" id="container">
             <div class="banner"></div>
+
             <div class="profile-section">
                 <img src="profile.gif" alt="Profile" class="profile-pic">
                 <div class="profile-emoji" id="randomEmoji"></div>
+
                 <div class="profile-info">
                     <div class="profile-name">@ realifektty</div>
                     <div class="profile-details">
@@ -278,27 +262,21 @@
                     </div>
                 </div>
             </div>
-            <div class="expanded-content" id="expandedContent">
-                <div class="content-section">
-                    <h3>⋆ fyi</h3>
-                    <p>slow replies vary, be direct about issues between us, i don't use text tones, selective fbs, i struggle with vulnerability</p>
-                </div>
-                <div class="content-section">
-                    <h3>⋆ disclaimer</h3>
-                    <p>i strongly advise not seeking me out for heavy topics as i do not have the ability to console others</p>
-                </div>
-            </div>
+
             <div class="social-links" id="socialLinks">
-                <a href="https://steamcommunity.com/id/realifekitty/" target="_blank" class="social-icon"><i class="fa-brands fa-steam"></i></a>
-                <a href="https://x.com/realifekitty" target="_blank" class="social-icon">
-                    <svg viewBox="0 0 24 24"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.237-1.594 1.25-3.604 1.995-5.792 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"/></svg>
+                <a href="https://steamcommunity.com/id/realifekitty/" target="_blank" class="social-icon">
+                    <i class="fa-brands fa-steam"></i>
                 </a>
+
+                <a href="https://x.com/realifekitty" target="_blank" class="social-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.237-1.594 1.25-3.604 1.995-5.792 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"/>
+                    </svg>
+                </a>
+
                 <a href="https://guns.lol/realifekitty" target="_blank" class="social-icon">
                     <span class="gunslol-icon"></span>
                 </a>
-            </div>
-            <div class="expand-button">
-                <div class="arrow" id="arrow"></div>
             </div>
         </div>
 
@@ -307,46 +285,52 @@
             <div id="box4" class="side-panel tilt-target"></div>
         </div>
     </div>
+
     <button class="power-btn" id="powerBtn">⏻</button>
 
     <script>
+        const titleText = "@userd7n";
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeTitle() {
+            const currentText = titleText.substring(0, charIndex);
+            document.title = currentText || "\u2800";
+
+            let typingSpeed = 300;
+
+            if (!isDeleting && charIndex === titleText.length) {
+                typingSpeed = 250;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 1) {
+                typingSpeed = 250;
+                isDeleting = false;
+            }
+
+            charIndex += isDeleting ? -1 : 1;
+            setTimeout(typeTitle, typingSpeed);
+        }
+
+        typeTitle();
+
         const emoticons = ["ᨐᵉᵒʷ"];
         const emojiElement = document.getElementById('randomEmoji');
         emojiElement.textContent = emoticons[Math.floor(Math.random() * emoticons.length)];
 
-        const arrow = document.getElementById('arrow');
-        const expandedContent = document.getElementById('expandedContent');
-        const socialLinks = document.getElementById('socialLinks');
         const powerBtn = document.getElementById('powerBtn');
         const leftCol = document.getElementById('leftCol');
         const rightCol = document.getElementById('rightCol');
-        const container = document.getElementById('container');
-        
-        let isExpanded = false;
-        let boxesVisible = false; 
+        let boxesVisible = false;
 
-        const initTilt = () => {
-            VanillaTilt.init(document.querySelectorAll(".tilt-target"), {
-                max: 3, speed: 1000, scale: 1.01
-            });
-        };
-        initTilt();
-
-        arrow.addEventListener('click', () => {
-            isExpanded = !isExpanded;
-            arrow.classList.toggle('rotated');
-            expandedContent.classList.toggle('show');
-            socialLinks.classList.toggle('show');
-            
-            if (isExpanded && container.vanillaTilt) {
-                container.vanillaTilt.destroy();
-            } else if (!isExpanded) {
-                initTilt();
-            }
+        VanillaTilt.init(document.querySelectorAll(".tilt-target"), {
+            max: 3,
+            speed: 1000,
+            scale: 1.01
         });
 
         powerBtn.addEventListener('click', () => {
             boxesVisible = !boxesVisible;
+
             if (boxesVisible) {
                 leftCol.classList.add('visible');
                 rightCol.classList.add('visible');
@@ -358,3 +342,4 @@
     </script>
 </body>
 </html>
+```
